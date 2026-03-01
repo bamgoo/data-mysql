@@ -1,51 +1,33 @@
 # data-mysql
 
-`data-mysql` 是 `data` 模块的 `mysql` 驱动。
+`data-mysql` 是 `github.com/infrago/data` 的**mysql 驱动**。
 
-## 安装
+## 包定位
 
-```bash
-go get github.com/infrago/data@latest
-go get github.com/infrago/data-mysql@latest
-```
+- 类型：驱动
+- 作用：把 `data` 模块的统一接口落到 `mysql` 后端实现
 
-## 接入
+## 快速接入
 
 ```go
 import (
     _ "github.com/infrago/data"
     _ "github.com/infrago/data-mysql"
-    "github.com/infrago/infra"
 )
-
-func main() {
-    infra.Run()
-}
 ```
-
-## 配置示例
 
 ```toml
 [data]
 driver = "mysql"
 ```
 
-## 公开 API（摘自源码）
+## `setting` 专用配置项
 
-- `func Driver() data.Driver`
-- `func (d *mysqlDriver) Connect(inst *data.Instance) (data.Connection, error)`
-- `func (c *mysqlConnection) Open() error`
-- `func (c *mysqlConnection) Close() error`
-- `func (c *mysqlConnection) Health() data.Health`
-- `func (c *mysqlConnection) DB() *sql.DB`
-- `func (c *mysqlConnection) Dialect() data.Dialect`
-- `func (mysqlDialect) Name() string { return "mysql" }`
-- `func (mysqlDialect) Quote(s string) string`
-- `func (mysqlDialect) Placeholder(_ int) string { return "?" }`
-- `func (mysqlDialect) SupportsILike() bool      { return false }`
-- `func (mysqlDialect) SupportsReturning() bool  { return false }`
+配置位置：`[data].setting`
 
-## 排错
+- `dsn`
 
-- driver 未生效：确认模块段 `driver` 值与驱动名一致
-- 连接失败：检查 endpoint/host/port/鉴权配置
+## 说明
+
+- `setting` 仅对当前驱动生效，不同驱动键名可能不同
+- 连接失败时优先核对 `setting` 中 host/port/认证/超时等参数
