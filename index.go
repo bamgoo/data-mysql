@@ -1,8 +1,8 @@
 package data_mysql
 
 import (
-	"github.com/bamgoo/bamgoo"
-	"github.com/bamgoo/data"
+	"github.com/infrago/infra"
+	"github.com/infrago/data"
 )
 
 func Driver() data.Driver {
@@ -10,5 +10,5 @@ func Driver() data.Driver {
 }
 
 func init() {
-	bamgoo.Register("mysql", Driver())
+	infra.Register("mysql", Driver())
 }

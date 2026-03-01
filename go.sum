@@ -1,5 +1,5 @@
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
-github.com/bamgoo/base v0.0.1 h1:xkxcGzLKTmaChj48CFSWIodDqpFVVHju74qJAIS4md0=
+github.com/infrago/base v0.0.1 h1:xkxcGzLKTmaChj48CFSWIodDqpFVVHju74qJAIS4md0=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/go-sql-driver/mysql v1.8.1 h1:LedoTUt/eveggdHS9qUFC1EFSa8bU2+1pZjSRpvNJ1Y=
 github.com/pelletier/go-toml/v2 v2.2.2 h1:aYUidT7k73Pcl9nb2gScu7NSrKCSHIDE89b3+6Wq+LM=

@@ -1,2 +1,2 @@
 # data-mysql
-bamgoo mysql data driver.
+infrago mysql data driver.
